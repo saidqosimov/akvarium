@@ -15,7 +15,7 @@ public class FishThread extends Thread {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-        System.out.println("Baliq " + fish.getId() + " hayotdan ko‘z yumdi.");
+        System.out.println("Baliq " + fish.getId() + " o'ldi.");
         aquarium.removeFish(fish);
     }
 }

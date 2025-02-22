@@ -15,12 +15,12 @@ public class Aquarium {
 
     public synchronized void addFish(Fish fish, boolean printMessage) {
         if (fishes.size() >= maxCapacity) {
-            System.out.println("Akvarium to‘ldi! Dastur to‘xtatilmoqda.");
+            System.out.println("Akvarium to'ldi! Dastur to'tatilmoqda.");
             System.exit(0);
         }
         fishes.add(fish);
         if (printMessage) {
-            System.out.println("Yangi baliq tug‘ildi: " + fish.getId() + " (" + fish.getGender() + ")");
+            System.out.println("Yangi baliq tug'ildi: " + fish.getId() + " (" + fish.getGender() + ")");
         }
         new FishThread(fish, this).start();
     }
@@ -28,7 +28,7 @@ public class Aquarium {
     public synchronized void removeFish(Fish fish) {
         fishes.remove(fish);
         if (fishes.isEmpty()) {
-            System.out.println("Barcha baliqlar o‘ldi. Dastur to‘xtatilmoqda.");
+            System.out.println("Barcha baliqlar o'ldi. Dastur to'tatilmoqda.");
             System.exit(0);
         }
     }
